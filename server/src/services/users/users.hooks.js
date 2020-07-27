@@ -7,7 +7,14 @@ const {
 
 module.exports = {
   before: {
-    all: [],
+    all: [
+      (hook) => {
+        // debugger;
+        console.log(hook.provider);
+        console.log(hook.params);
+        // console.log('I know how to debug!');
+      },
+    ],
     find: [authenticate('jwt')],
     get: [authenticate('jwt')],
     create: [hashPassword('password')],
