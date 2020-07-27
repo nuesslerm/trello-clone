@@ -12,12 +12,12 @@ module.exports = function (app) {
         unique: true,
         required: [true, 'Username is required'],
       },
+      password: { type: String, required: [true, 'Username is required'] },
       displayName: {
         type: String,
         required: [true, 'DisplayName is required'],
       },
       imageUrl: { type: String, required: [true, 'Username is required'] },
-      password: { type: String, required: [true, 'Username is required'] },
     },
     {
       timestamps: true,
