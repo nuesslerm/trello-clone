@@ -17,8 +17,6 @@ const channels = require('./channels');
 
 const authentication = require('./authentication');
 
-const mongoose = require('./mongoose');
-
 const app = express(feathers());
 
 // Load app configuration
@@ -37,6 +35,8 @@ app.use('/', express.static(app.get('public')));
 app.configure(express.rest());
 app.configure(socketio());
 
+const mongoose = require('./mongoose');
+
 app.configure(mongoose);
 
 // Configure other middleware (see `middleware/index.js`)
@@ -48,8 +48,8 @@ app.configure(services);
 app.configure(channels);
 
 // Configure a middleware for 404s and the error handler
-app.use(express.notFound());
 app.use(express.errorHandler({ logger }));
+app.use(express.notFound());
 
 app.hooks(appHooks);
 

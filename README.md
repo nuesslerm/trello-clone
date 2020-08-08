@@ -5,7 +5,8 @@
 * [x] Generate Server
 * [x] Generate Client
 * [] Add local auth to server
-* [] Add login to client 
+* [] Add email form login to client 
+* [] Add 
 * [] Add boards service to server
 * [] User can create/list/view boards on client
   * [] Create

@@ -14,6 +14,4 @@ module.exports = function (app) {
     });
 
   mongoose.Promise = global.Promise;
-
-  app.set('mongooseClient', mongoose);
 };
