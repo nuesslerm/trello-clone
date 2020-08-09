@@ -1,4 +1,10 @@
 {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
   "extends": [
     "react-app",
     "airbnb",
@@ -14,14 +20,19 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-spacing": ["error", "always"],
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
+        "printWidth": 80,
+        "arrowParens": "always",
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "tabWidth": 2,
         "semi": true,
-        "quotes": "single",
-        "indent": 2,
-        "linebreak-style": "unix"
+        "singleQuote": true
       }
     ]
   }

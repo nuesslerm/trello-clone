@@ -12,15 +12,14 @@ module.exports = function (app) {
         unique: true,
         index: true,
         required: [true, `can't be blank`],
-        match: [/^[a-zA-Z0-9_-]+$/, 'is invalid'],
       },
       password: { type: String, required: [true, `can't be blank`] },
       displayName: {
         type: String,
         unique: true,
-        required: [true, 'DisplayName is required'],
+        required: [true, `can't be blank`],
       },
-      imageUrl: { type: String, required: [true, `can't be blank`] },
+      imageUrl: { type: String },
     },
     {
       timestamps: true,
